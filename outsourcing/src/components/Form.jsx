@@ -41,14 +41,14 @@ function Form() {
             const result = await response.json();
 
             console.log(result);
-            
+
             if (result.state) {
                 cleanForm();
             }
             setLoading(false);
             setMessage(result.message);
             setVisible(true);
-            
+
 
         } catch (error) {
             console.error("Error de comunicación:", error);
@@ -68,11 +68,11 @@ function Form() {
             </Dialog>
 
             <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-12 gap-4 mt-20">
+                <div className="grid grid-cols-12 gap-4 lg:mt-20">
                     <div className="col-span-1"></div>
 
                     <div className="grid grid-cols-subgrid gap-4 col-span-10 box-form">
-                        <div className="col-span-5">
+                        <div className="col-span-10 lg:col-span-5">
                             <div className="form-label">
                                 <div className="form-title">NOMBRE</div>
                                 <input
@@ -86,7 +86,7 @@ function Form() {
                             </div>
 
                             <div className="form-label">
-                                <div className="form-title mt-10">E-MAIL</div>
+                                <div className="form-title lg:mt-10">E-MAIL</div>
                                 <input
                                     ref={emailRef}
                                     maxLength={40}
@@ -97,7 +97,7 @@ function Form() {
                                 />
                             </div>
                         </div>
-                        <div className="col-span-5">
+                        <div className="col-span-10 lg:col-span-5">
                             <div className="form-label">
                                 <div className="form-title">EMPRESA</div>
                                 <input
@@ -110,7 +110,7 @@ function Form() {
                             </div>
 
                             <div className="form-label">
-                                <div className="form-title mt-10">TELÉFONO</div>
+                                <div className="form-title lg:mt-10">TELÉFONO</div>
                                 <input
                                     ref={phoneRef}
                                     maxLength={20}
