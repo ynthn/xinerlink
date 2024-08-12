@@ -1,7 +1,9 @@
-import Header from './components/Header'
-import Form from './components/Form'
-import Footer from './components/Footer'
-import Services from './components/Services'
+import Header from "./components/Header"
+import Form from "./components/Form"
+import Services from "./components/Services"
+import Footer from "./components/Footer"
+
+
 
 import empresa from "./assets/empresa-certificada.png";
 
@@ -9,10 +11,9 @@ import { motion, useAnimation, useInView } from "framer-motion"
 import { useEffect, useRef } from 'react';
 
 function App() {
-
   /**
-  * ANIMATION FRAME MOTION
-  */
+    * ANIMATION FRAME MOTION
+    */
   const refMotion = useRef(null);
   const isInView = useInView(refMotion, { once: true, threshold: 0.3 });
   const mainControls = useAnimation();
@@ -24,7 +25,6 @@ function App() {
       mainControls.start("hidden");
     }
   }, [mainControls, isInView]);
-
   return (
     <>
       <motion.div
@@ -83,10 +83,11 @@ function App() {
       >
         <Form></Form>
 
+
+        <Services></Services>
+
       </motion.div>
 
-
-      <Services></Services>
 
 
       <motion.div
@@ -102,11 +103,9 @@ function App() {
       >
         <Footer></Footer>
       </motion.div>
-
-
-
     </>
   )
 }
+
 
 export default App
