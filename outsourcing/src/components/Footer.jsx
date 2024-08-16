@@ -25,12 +25,12 @@ function Footer() {
                     <div className="footer-rrss-title mt-10 mb-4">Síguenos</div>
                     <ul className="footer-rrss">
                         <li>
-                            <a>
+                            <a href="https://www.instagram.com/xinerlink/" target="_blank">
                                 <img src={icoInstagram}></img>
                             </a>
                         </li>
                         <li>
-                            <a>
+                            <a href="https://www.facebook.com/xinerlink/" target="_blank">
                                 <img src={icoFacebook}></img>
                             </a>
                         </li>
@@ -42,9 +42,9 @@ function Footer() {
                     </ul>
                 </div>
                 <div className="col-span-12 lg:col-span-3 m-auto lg:m-0">
-                    <a className="footer-rrss-link mt-10">Servicios Transitorios</a>
-                    <a className="footer-rrss-link mt-4">Outsourcing</a>
-                    <a className="footer-rrss-link mt-4">BPO</a>
+                    <a href="https://registros.xinerlink.cl/servicios_transitorios" target="_blank" className="footer-rrss-link mt-10">Servicios Transitorios</a>
+                    <a href="https://registros.xinerlink.cl/outsourcing" target="_blank" className="footer-rrss-link mt-4">Outsourcing</a>
+                    <a href="https://registros.xinerlink.cl/bpo" target="_blank" className="footer-rrss-link mt-4">BPO</a>
                 </div>
                 <div className="col-span-1"></div>
             </div>

@@ -4,8 +4,8 @@ import Services from "./components/Services"
 import Footer from "./components/Footer"
 
 
-import empresa from "./assets/empresa-certificada.png";
 
+import empresa from "./assets/empresa-certificada.png";
 
 import { motion, useAnimation, useInView } from "framer-motion"
 import { useEffect, useRef } from 'react';

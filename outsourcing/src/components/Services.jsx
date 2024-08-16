@@ -18,6 +18,18 @@ import { motion, useAnimation, useInView } from "framer-motion"
 import { useEffect, useRef } from 'react';
 
 function Services() {
+
+    /**
+     * ANIMATION SCROLL CLICK CONTACT
+     */
+    const scrollToContact = () => {
+        const contactSection = document.getElementById('contactanos');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+
     /**
     * ANIMATION FRAME MOTION
     */
@@ -185,7 +197,7 @@ function Services() {
                             hablemos!
                         </div>
                         <div className="text-center mt-10">
-                            <a className="service-sec3-btn">CONTACTANOS</a>
+                            <a onClick={scrollToContact} className="service-sec3-btn">CONTACTANOS</a>
                         </div>
                     </motion.div>
 
@@ -221,7 +233,7 @@ function Services() {
                         transition={{ duration: 0.5, delay: 0.25 }}
                     >
                         <div className="service-sec4-title">
-                            Nuestros Servicios permanentes
+                            Algunos de nuestros servicios
                         </div>
                     </motion.div>
 
@@ -235,117 +247,6 @@ function Services() {
 
 
             <div className="grid grid-cols-11 gap-6 mt-10 pl-8 lg:pl-0 pr-8 lg:pr-0">
-                <div className="hidden lg:col-span-1 lg:block"></div>
-
-                <div className="col-span-12 lg:col-span-3">
-                    <motion.div
-                        ref={refMotion}
-                        variants={{
-                            hidden: { opacity: 0, y: 100 },
-                            visible: { opacity: 1, y: 0 }
-                        }}
-                        initial="hidden"
-                        animate={mainControls}
-                        whileInView="visible"
-                        transition={{ duration: 0.5, delay: 0.25 }}
-                    >
-                        <img src={services_1} />
-                        <div className="service-sec4-text">Personal Minería</div>
-                    </motion.div>
-
-                </div>
-                <div className="col-span-12 lg:col-span-3">
-                    <motion.div
-                        ref={refMotion}
-                        variants={{
-                            hidden: { opacity: 0, y: 100 },
-                            visible: { opacity: 1, y: 0 }
-                        }}
-                        initial="hidden"
-                        animate={mainControls}
-                        whileInView="visible"
-                        transition={{ duration: 0.5, delay: 0.25 }}
-                    >
-                        <img src={services_2} />
-                        <div className="service-sec4-text">Personal Paro de Planta</div>
-                    </motion.div>
-
-                </div>
-                <div className="col-span-12 lg:col-span-3">
-                    <motion.div
-                        ref={refMotion}
-                        variants={{
-                            hidden: { opacity: 0, y: 100 },
-                            visible: { opacity: 1, y: 0 }
-                        }}
-                        initial="hidden"
-                        animate={mainControls}
-                        whileInView="visible"
-                        transition={{ duration: 0.5, delay: 0.25 }}
-                    >
-                        <img src={services_3} />
-                        <div className="service-sec4-text">Personal Salud</div>
-                    </motion.div>
-
-                </div>
-
-                <div className="hidden lg:col-span-1 lg:block"></div>
-
-                <div className="hidden lg:col-span-1 lg:block"></div>
-
-                <div className="col-span-12 lg:col-span-3">
-                    <motion.div
-                        ref={refMotion}
-                        variants={{
-                            hidden: { opacity: 0, y: 100 },
-                            visible: { opacity: 1, y: 0 }
-                        }}
-                        initial="hidden"
-                        animate={mainControls}
-                        whileInView="visible"
-                        transition={{ duration: 0.5, delay: 0.25 }}
-                    >
-                        <img src={services_4} />
-                        <div className="service-sec4-text">Personal Administrativo</div>
-                    </motion.div>
-
-                </div>
-                <div className="col-span-12 lg:col-span-3">
-                    <motion.div
-                        ref={refMotion}
-                        variants={{
-                            hidden: { opacity: 0, y: 100 },
-                            visible: { opacity: 1, y: 0 }
-                        }}
-                        initial="hidden"
-                        animate={mainControls}
-                        whileInView="visible"
-                        transition={{ duration: 0.5, delay: 0.25 }}
-                    >
-                        <img src={services_5} />
-                        <div className="service-sec4-text">Contact Center Atención Digital</div>
-                    </motion.div>
-
-                </div>
-                <div className="col-span-12 lg:col-span-3">
-                    <motion.div
-                        ref={refMotion}
-                        variants={{
-                            hidden: { opacity: 0, y: 100 },
-                            visible: { opacity: 1, y: 0 }
-                        }}
-                        initial="hidden"
-                        animate={mainControls}
-                        whileInView="visible"
-                        transition={{ duration: 0.5, delay: 0.25 }}
-                    >
-                        <img src={services_6} />
-                        <div className="service-sec4-text">Gestión Documental RPA</div>
-                    </motion.div>
-
-                </div>
-
-                <div className="hidden lg:col-span-1 lg:block"></div>
 
 
                 <div className="hidden lg:col-span-1 lg:block"></div>
@@ -365,8 +266,9 @@ function Services() {
                         <img src={services_7} />
                         <div className="service-sec4-text">Facility Services</div>
                     </motion.div>
-
                 </div>
+
+
                 <div className="col-span-12 lg:col-span-3">
                     <motion.div
                         ref={refMotion}
@@ -382,8 +284,141 @@ function Services() {
                         <img src={services_8} />
                         <div className="service-sec4-text">Servicios Hotelería</div>
                     </motion.div>
-
                 </div>
+
+                <div className="col-span-12 lg:col-span-3">
+                    <motion.div
+                        ref={refMotion}
+                        variants={{
+                            hidden: { opacity: 0, y: 100 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        initial="hidden"
+                        animate={mainControls}
+                        whileInView="visible"
+                        transition={{ duration: 0.5, delay: 0.25 }}
+                    >
+                        <img src={services_3} />
+                        <div className="service-sec4-text">Personal Salud</div>
+                    </motion.div>
+                </div>
+
+
+
+
+
+
+
+
+                <div className="hidden lg:col-span-1 lg:block"></div>
+                <div className="hidden lg:col-span-1 lg:block"></div>
+
+
+
+
+
+
+
+                <div className="col-span-12 lg:col-span-3">
+                    <motion.div
+                        ref={refMotion}
+                        variants={{
+                            hidden: { opacity: 0, y: 100 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        initial="hidden"
+                        animate={mainControls}
+                        whileInView="visible"
+                        transition={{ duration: 0.5, delay: 0.25 }}
+                    >
+                        <img src={services_4} />
+                        <div className="service-sec4-text">Personal Administrativo</div>
+                    </motion.div>
+                </div>
+
+                <div className="col-span-12 lg:col-span-3">
+                    <motion.div
+                        ref={refMotion}
+                        variants={{
+                            hidden: { opacity: 0, y: 100 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        initial="hidden"
+                        animate={mainControls}
+                        whileInView="visible"
+                        transition={{ duration: 0.5, delay: 0.25 }}
+                    >
+                        <img src={services_5} />
+                        <div className="service-sec4-text">Contact Center Atención Digital</div>
+                    </motion.div>
+                </div>
+
+                <div className="col-span-12 lg:col-span-3">
+                    <motion.div
+                        ref={refMotion}
+                        variants={{
+                            hidden: { opacity: 0, y: 100 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        initial="hidden"
+                        animate={mainControls}
+                        whileInView="visible"
+                        transition={{ duration: 0.5, delay: 0.25 }}
+                    >
+                        <img src={services_6} />
+                        <div className="service-sec4-text">Gestión Documental RPA</div>
+                    </motion.div>
+                </div>
+
+
+
+
+
+
+
+                <div className="hidden lg:col-span-1 lg:block"></div>
+                <div className="hidden lg:col-span-1 lg:block"></div>
+
+
+
+
+
+
+
+                <div className="col-span-12 lg:col-span-3">
+                    <motion.div
+                        ref={refMotion}
+                        variants={{
+                            hidden: { opacity: 0, y: 100 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        initial="hidden"
+                        animate={mainControls}
+                        whileInView="visible"
+                        transition={{ duration: 0.5, delay: 0.25 }}
+                    >
+                        <img src={services_1} />
+                        <div className="service-sec4-text">Personal Minería</div>
+                    </motion.div>
+                </div>
+
+                <div className="col-span-12 lg:col-span-3">
+                    <motion.div
+                        ref={refMotion}
+                        variants={{
+                            hidden: { opacity: 0, y: 100 },
+                            visible: { opacity: 1, y: 0 }
+                        }}
+                        initial="hidden"
+                        animate={mainControls}
+                        whileInView="visible"
+                        transition={{ duration: 0.5, delay: 0.25 }}
+                    >
+                        <img src={services_2} />
+                        <div className="service-sec4-text">Personal Paro de Planta</div>
+                    </motion.div>
+                </div>
+
                 <div className="col-span-12 lg:col-span-3">
                     <motion.div
                         ref={refMotion}
@@ -399,7 +434,6 @@ function Services() {
                         <img src={services_9} />
                         <div className="service-sec4-text">Personal Seguridad</div>
                     </motion.div>
-
                 </div>
 
                 <div className="hidden lg:col-span-1 lg:block"></div>
@@ -407,13 +441,7 @@ function Services() {
 
 
 
-
-
-
             </div>
-
-
-
 
         </>
     )

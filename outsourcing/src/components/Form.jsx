@@ -68,7 +68,7 @@ function Form() {
             </Dialog>
 
             <form onSubmit={handleSubmit}>
-                <div className="grid grid-cols-12 gap-4 lg:mt-20">
+                <div id="contactanos" className="grid grid-cols-12 gap-4 lg:mt-20">
                     <div className="col-span-1"></div>
 
                     <div className="grid grid-cols-subgrid gap-4 col-span-10 box-form">
