@@ -4,7 +4,7 @@ import { Dialog } from 'primereact/dialog';
 
 function Form() {
     const [loading, setLoading] = useState(false);
-    const URL_API = "https://boxweb.cl/outsourcing/backend/app.php";
+    const URL_API = "https://registros.xinerlink.cl/servicios_transitorios/backend/app.php";
     const nameRef = useRef(null);
     const emailRef = useRef(null);
     const phoneRef = useRef(null);
